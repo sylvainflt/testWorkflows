@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: helloWorld
 on: [workflow_dispatch]
 jobs:
   my-job:

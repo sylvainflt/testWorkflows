@@ -1,0 +1,11 @@
+name: PR-fermee
+on:
+  pull_request:
+    types: [closed]
+jobs:
+  PR_fermee:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.pull_request.merged == true }}
+    steps:
+      - name: afficher message
+        run: echo "PR fermée, elle a été mergée !"
