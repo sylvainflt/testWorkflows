@@ -1,0 +1,16 @@
+name: push_or_pull
+on: [push, pull_request]
+
+jobs:
+  push_ci:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' }}
+    steps:
+      - name: afficher push
+        run: echo "C'est un push !"
+  pull_ci:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' }}
+    steps:
+      - name: afficher pull
+        run: echo "C'est une pull_request !"
